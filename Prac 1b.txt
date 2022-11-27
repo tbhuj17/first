@@ -1,0 +1,50 @@
+#include<stdio.h>
+/*Name: Tilak Bhujade
+2nd year data science
+Practical 1(b)
+Aim: WAP to calculate the sum and average of each row of a 
+2D array and store in 2 separate arrays*/
+void printarr(int arr[3][3])
+{
+    int i,j;
+    for(i = 0;i < 3;i++)
+    {
+        for(j = 0;j < 3;j++)
+            printf("%d ",arr[i][j]);
+            printf("\n");
+    }
+}
+void pprintarr(int arr[3])
+{
+    int i;
+    for(i = 0;i < 3;i++)
+        printf("%d ",arr[i]);
+}
+void main()
+{
+    int i,j,k,l,m,sum[3]={0,0,0},avg[3]={0,0,0},arr[3][3];
+    for(i = 0;i < 3;i++)
+    {
+        for(j = 0;j < 3;j++)
+        {
+            printf("Enter val for arr[%d][%d]: ",i,j);
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printarr(arr);
+    //sum[] = 0;
+    //avg[k] = 0;
+    for(k = 0;k < 3;k++)
+    {
+        for(l = 0;l < 3;l++)
+        {
+            sum[k] = sum[k]+arr[k][l];
+        }
+        avg[k] = sum[k]/3;
+       
+    }
+    printf("The sum is ");
+    pprintarr(sum);
+    printf("\nThe avg is ");
+    pprintarr(avg);
+}

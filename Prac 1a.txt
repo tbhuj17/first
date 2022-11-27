@@ -1,0 +1,51 @@
+ #include<stdio.h>
+ /*Name: Tilak Bhujade
+2nd year data science
+Practical 1(b)
+Aim: WAP to pyt even and odd elements of an array in two
+different arrays.*/
+ void printarr(int arr[])
+ {
+     int j;
+     for(j = 0;j < 10;j++)
+         printf("%d ",arr[j]);
+ }
+ void printarr2(int arr[])
+ {
+     int j;
+     for(j = 0;j < 5;j++)
+         printf("%d ",arr[j]);
+ }
+ void main()
+ {
+     //WAP to put even and odd elems of an array in two different arrays
+     int arr[10],odd[5],even[5],i,j,k,l = 0,m = 0;
+     for(i = 0;i < 10;i++)
+     {
+         printf("Enter val for %d:",i);
+         scanf("%d",&arr[i]);
+     }
+     printf("The entered array is\n");
+     printarr(arr);
+     printf("\n");
+ 
+     for(k = 0;k < 10;k++)
+     {
+         if(arr[k]%2 == 0)
+         {
+             even[l] = arr[k];
+             l++;
+         }
+         else
+         {
+             odd[m] = arr[k];
+             m++;
+         }
+       
+     }
+     printf("The odd elemennts are: \n");
+     printarr2(odd);
+     printf("\nThe even elements are: \n");
+     printarr2(even);
+
+ }
